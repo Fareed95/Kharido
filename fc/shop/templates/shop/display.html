@@ -1,0 +1,18 @@
+{%extends 'shop/basic.html'%}
+{%block title%} EX 3 {% endblock %}
+{%block body%}
+    <h1>Products </h1><hr><hr>
+    {% for post in posts %}
+    <ul>
+            <li><strong>name of the product :</strong>{{ post.product_name }}</li>
+            <li><strong>description of the project :</strong>{{ post.desc }}</li>
+            <li><strong>date of published :</strong>{{ post.pub_date}}</li>
+            <li><strong>category :</strong>{{ post.category}}</li>
+            <li><strong>subcategory :</strong>{{ post.subcategory }}</li>
+            <li><strong>price of the product :</strong>{{ post.price}}</li>
+            <li>
+                <strong>image :{{ post.images}}</strong>
+            </ul><br><strong><hr></strong>
+    {% endfor %}
+{% endblock %}
+
